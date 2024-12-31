@@ -1,2 +1,2 @@
 # Enchiridion
-This is a repository for programs i do for fun :)
+Personal projects for fun, and development of my current knowledge.
