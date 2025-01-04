@@ -39,6 +39,17 @@ console.log(`Programming is cool: ${online}`);
 document.getElementById("myH1").textContent = "look at this";
 document.getElementById("myP").textContent = `you are ${msg}`;
 
+//type conversion below:
 
+let age = window.prompt("How old are you?");
+age+=1;
 
+console.log(age);
 
+//this converts a string into a number, since you can do arithmetic calculations with it
+
+//when strings/nums are converted to boolean they are always true, except when it is an empty string/num
+
+const PI = 3.14159;
+
+//cont is a constant variable that cant be changed

@@ -12,4 +12,17 @@ num %= 2;
 //just as in other languages
 
 
+//there are also mathematical operations using
+
+Math.floor();
+// math.
+
+//showing how min max values work and how math works
+
+const min = 50;
+const max = 100;
+
+let randomNum = Math.floor(Math.random() * max) + min;
+
+console.log(randomNum);
 
