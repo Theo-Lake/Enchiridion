@@ -18,7 +18,7 @@ if(age >= 18) {
 //tenary way:
 
 let message = age >= 18 ? "You're an adult" : "You're a minor";
-
+console.log(message);
 //let message is used because the string must be assigned a variable,
 // which in turn will be message.
  
