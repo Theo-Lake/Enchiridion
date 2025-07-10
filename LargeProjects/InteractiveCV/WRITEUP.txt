@@ -1,0 +1,23 @@
+Write up:
+
+21/6/2025-->
+
+    Beginning of the project. Deciding languages that I will use, what are my basic requirements, and initial "shell" programming (in terms that its just the basic stuff)
+
+        Tech and languages:
+            JSON file for information within the CV/resume
+            HTML, CSS and Javascript with React framework for web development
+
+        Requirements:
+            Data can be updated easily
+            Minimalitsitc and slick
+            Cool animations and buttons to display css ability though not too overpowering and tedious for recruiters
+            Have a Contact me button which inputs credentials and sends email to me
+
+        Ideas:
+            Scroll reveal using AOS (animate on scroll)
+
+        Additional:
+            I want this to be not only a resume but a opportunity for learning web development, thus I will not use any tutorials to creat the full cv, but
+            only tutorials such as React 101, javascript beginners guide, html and css etc.
+
