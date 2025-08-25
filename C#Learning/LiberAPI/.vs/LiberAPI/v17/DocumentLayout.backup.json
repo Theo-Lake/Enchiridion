@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\theos\\source\\repos\\LiberAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\routes\\clienteroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\routes\\clienteroute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\data\\clientecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\data\\clientecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|c:\\users\\theos\\source\\repos\\liberapi\\liberapi\\liberapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2AE2CC0-947E-4234-9417-2E80FDE3676A}|LiberAPI\\LiberAPI.csproj|solutionrelative:liberapi\\liberapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteRoute.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Routes\\ClienteRoute.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Routes\\ClienteRoute.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Routes\\ClienteRoute.cs",
+              "RelativeToolTip": "LiberAPI\\Routes\\ClienteRoute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:28:39.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Program.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Program.cs",
+              "RelativeToolTip": "LiberAPI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:11:57.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Cliente.cs",
+              "RelativeToolTip": "LiberAPI\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:35:25.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Categoria.cs",
+              "RelativeToolTip": "LiberAPI\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:36:18.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClienteContext.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Data\\ClienteContext.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Data\\ClienteContext.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Data\\ClienteContext.cs",
+              "RelativeToolTip": "LiberAPI\\Data\\ClienteContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:40:21.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Venda.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Venda.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Models\\Venda.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Venda.cs",
+              "RelativeToolTip": "LiberAPI\\Models\\Venda.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwBEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:37:11.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\Produto.cs",
+              "RelativeToolTip": "LiberAPI\\Models\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:36:54.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemVenda.cs",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\ItemVenda.cs",
+              "RelativeDocumentMoniker": "LiberAPI\\Models\\ItemVenda.cs",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\Models\\ItemVenda.cs",
+              "RelativeToolTip": "LiberAPI\\Models\\ItemVenda.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T15:36:30.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LiberAPI",
+              "DocumentMoniker": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
+              "RelativeDocumentMoniker": "LiberAPI\\LiberAPI.csproj",
+              "ToolTip": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
+              "RelativeToolTip": "LiberAPI\\LiberAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-15T15:27:56.366Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
