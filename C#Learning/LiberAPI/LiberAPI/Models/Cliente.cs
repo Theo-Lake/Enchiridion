@@ -2,7 +2,7 @@
 
 namespace LiberaAPI
 {
-    public class Cliente(String nome, String telefone)
+    public class Cliente
     {
         public int Id { get; private set; }
         public String Nome { get; private set; }  
@@ -11,6 +11,12 @@ namespace LiberaAPI
         
         public void ChangeName(string nome) => this.Nome = nome;
         public void ChangeTelefone(string telefone) => this.Telefone = telefone;
+
+        public Cliente(String nome, String telefone)
+        {
+            this.Nome = nome;
+            this.Telefone = telefone;
+        }
         
     }
 }

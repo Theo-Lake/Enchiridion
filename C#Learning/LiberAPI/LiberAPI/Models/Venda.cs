@@ -4,7 +4,7 @@ using LiberAPI.Models;
 
 namespace LiberaAPI
 {
-    public class Venda(int clienteId)
+    public class Venda
     {
         public int Id {  get; private set; }
         
@@ -32,8 +32,11 @@ namespace LiberaAPI
             if(precoUnitario <= 0) throw new ArgumentException("PrecoUnitario deve ser maior que 0");
             Itens.Add(new ItemVenda(produtoId,quantidade,precoUnitario));
         }
-        
-        
+
+        public Venda(int ClienteId)
+        {
+            this.ClienteId = ClienteId;
+        }
     }
 }
 

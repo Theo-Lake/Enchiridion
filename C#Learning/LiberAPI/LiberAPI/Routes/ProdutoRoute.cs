@@ -9,7 +9,7 @@ public static class ProdutoRoute
 {
     public static void MapProdutos(this WebApplication app)
     {
-        var route = app.MapGroup("produtos");
+        var route = app.MapGroup("/produtos");
         
         route.MapPost("", async (ProdutoRequest req, AppDbContext context) =>
         {
@@ -17,12 +17,14 @@ public static class ProdutoRoute
             await context.Produtos.AddAsync(produto);
             await context.SaveChangesAsync();
             
-            return Results.Created($"produtos/{produto.Id}", produto);
+            return Results.Created($"/produtos/{produto.Id}", produto);
         });
 
-        route.MapGet("{id:int}", async (AppDbContext context) =>
+        route.MapGet("", async (AppDbContext context) =>
         {
-            var produto = await context.Produtos.ToListAsync();
+            var produto = await context.Produtos
+                .Include(p => p.Categoria)
+                .ToListAsync();             //this is so that it displays the categoria inside the produto get
             return Results.Ok(produto);
         });
         

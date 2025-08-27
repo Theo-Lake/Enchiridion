@@ -9,7 +9,7 @@ namespace LiberAPI.Routes
     {
         public static void MapCliente(this WebApplication app)
         {
-            var route = app.MapGroup("clientes"); //this is used so app.MapGroup("").Map... isnt needed
+            var route = app.MapGroup("/clientes"); //this is used so app.MapGroup("").Map... isnt needed
                             
                             //patttern "" is just what would be added under cliente so /cliente/create if pattern was "create"
             //CREATE
@@ -28,7 +28,7 @@ namespace LiberAPI.Routes
             });
 
             //READ
-            route.MapGet("{id:int}", async (AppDbContext context) =>
+            route.MapGet("", async (AppDbContext context) =>
             {
                 var cliente = await context.Clientes.ToListAsync();
                 return Results.Ok(cliente);

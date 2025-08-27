@@ -8,7 +8,7 @@ public static class CategoriaRoute
 {
     public static void MapCategorias(this WebApplication app)
     {
-        var route = app.MapGroup("categorias"); 
+        var route = app.MapGroup("/categorias"); 
         route.MapPost("", async (CategoriaRequest req, AppDbContext context) =>
         {
             var categoria = new Categoria(req.Nome);
@@ -20,7 +20,7 @@ public static class CategoriaRoute
             return Results.Created($"/categorias/{categoria.Id}", new { categoria.Id, categoria.Nome });
         });
         
-        route.MapGet("{id:int}", async (AppDbContext context) =>
+        route.MapGet("", async (AppDbContext context) =>
         {
             var categoria = await context.Categorias.ToListAsync();
             return Results.Ok(categoria);

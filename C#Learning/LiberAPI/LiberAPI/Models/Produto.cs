@@ -3,7 +3,7 @@ using System;
 
 namespace LiberaAPI
 {
-    public class Produto(String nome, int categoriaId, decimal preco)
+    public class Produto
     {
         public int Id { get; private set; }
         public String Nome { get; set; }
@@ -16,6 +16,12 @@ namespace LiberaAPI
         public void ChangeCategoria(int categoriaId) => this.CategoriaId = categoriaId; 
         
         //TODO implement the changeCategoria actually changing the categoria because now it only changes the ID
-        
+
+        public Produto(String nome, int categoriaId, decimal preco)
+        {
+            this.Nome = nome;
+            this.CategoriaId = categoriaId;
+            this.Preco = preco;
+        }
     }
 }

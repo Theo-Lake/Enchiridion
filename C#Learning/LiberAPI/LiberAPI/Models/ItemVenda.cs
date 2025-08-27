@@ -2,7 +2,7 @@
 
 namespace LiberaAPI
 {
-    public class ItemVenda(int produtoId, int quantidade, decimal precoUnitario)
+    public class ItemVenda
     {
         public int Id { get; private set; }
         
@@ -22,5 +22,12 @@ namespace LiberaAPI
         public void ChangeProduto(int produtoId) => this.ProdutoId = produtoId;
         
         //TODO implement the changeProduto actually changing the produto because now it only changes the ID
+
+        public ItemVenda(int produtoId, int quantidade, decimal precoUnitario)
+        {
+            this.ProdutoId = produtoId;
+            this.Quantidade = quantidade;
+            this.PrecoUnitario = precoUnitario;
+        }
     }
 }
