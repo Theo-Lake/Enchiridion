@@ -12,8 +12,12 @@ public static class CategoriaRoute
         route.MapPost("", async (CategoriaRequest req, AppDbContext context) =>
         {
             var categoria = new Categoria(req.Nome);
+            if (req.Nome == null)
+                return Results.BadRequest("Nome e necessario");
             await context.Categorias.AddAsync(categoria);
             await context.SaveChangesAsync();
+            
+            return Results.Created($"/categorias/{categoria.Id}", new { categoria.Id, categoria.Nome });
         });
         
         route.MapGet("{id:int}", async (AppDbContext context) =>

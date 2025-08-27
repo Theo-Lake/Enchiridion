@@ -16,8 +16,15 @@ namespace LiberAPI.Routes
             route.MapPost("", async (ClienteRequest req, AppDbContext context) =>
             {
                 var cliente = new Cliente(req.Nome, req.Telefone);
+                Console.WriteLine(req.Nome);
+                if (req.Nome == null)
+                    return Results.BadRequest("Nome e necessario");
+                if(req.Telefone == null)
+                    return Results.BadRequest("Telefone e necessario");
                 await context.Clientes.AddAsync(cliente);
                 await context.SaveChangesAsync();
+                
+                return Results.Created($"/clientes/{cliente.Id}", new { cliente.Id, cliente.Nome, cliente.Telefone });
             });
 
             //READ
