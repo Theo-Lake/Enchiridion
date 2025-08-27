@@ -21,7 +21,7 @@ namespace LiberAPI.Routes
             });
 
             //READ
-            route.MapGet("", async (AppDbContext context) =>
+            route.MapGet("{id:int}", async (AppDbContext context) =>
             {
                 var cliente = await context.Clientes.ToListAsync();
                 return Results.Ok(cliente);

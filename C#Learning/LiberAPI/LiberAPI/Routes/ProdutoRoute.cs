@@ -20,7 +20,7 @@ public static class ProdutoRoute
             return Results.Created($"produtos/{produto.Id}", produto);
         });
 
-        route.MapGet("", async (ProdutoRequest req, AppDbContext context) =>
+        route.MapGet("{id:int}", async (AppDbContext context) =>
         {
             var produto = await context.Produtos.ToListAsync();
             return Results.Ok(produto);

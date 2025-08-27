@@ -16,7 +16,7 @@ public static class CategoriaRoute
             await context.SaveChangesAsync();
         });
         
-        route.MapGet("", async (AppDbContext context) =>
+        route.MapGet("{id:int}", async (AppDbContext context) =>
         {
             var categoria = await context.Categorias.ToListAsync();
             return Results.Ok(categoria);

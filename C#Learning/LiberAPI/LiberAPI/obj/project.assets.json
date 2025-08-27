@@ -3585,11 +3585,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\theos\\Documents\\GitHub\\Enchiridion\\C#Learning\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
+      "projectUniqueName": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
       "projectName": "LiberAPI",
-      "projectPath": "C:\\Users\\theos\\Documents\\GitHub\\Enchiridion\\C#Learning\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
+      "projectPath": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\LiberAPI.csproj",
       "packagesPath": "C:\\Users\\theos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\theos\\Documents\\GitHub\\Enchiridion\\C#Learning\\LiberAPI\\LiberAPI\\obj\\",
+      "outputPath": "C:\\Users\\theos\\source\\repos\\LiberAPI\\LiberAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
