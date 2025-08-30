@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Criar Cliente</title>
+    <link rel="stylesheet" href="CriarC.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="CriarC.js" defer></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card2">
+        <form class="form" action="">
+          <h1 id="heading">Novo Cliente</h1>
+
+          <div class="fields">
+            <div class="field">
+              <!-- user icon -->
+              <svg
+                class="input-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z"
+                />
+              </svg>
+              <input
+                class="input-field"
+                required
+                type="text"
+                id="NomeInput"
+                name="Nome"
+                placeholder="Nome"
+              />
+            </div>
+
+            <div class="field">
+              <!-- phone icon -->
+              <svg
+                class="input-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 -960 960 960"
+              >
+                <path
+                  d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z"
+                />
+              </svg>
+              <input
+                class="input-field"
+                required
+                type="tel"
+                id="TelefoneInput"
+                name="Telefone"
+                placeholder="Telefone"
+              />
+            </div>
+          </div>
+
+          <div class="btn">
+            <button type="submit" id="button">Criar Cliente</button>
+          </div>
+
+          <p class="below">Já é um cliente? <a href="login.html">login</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
