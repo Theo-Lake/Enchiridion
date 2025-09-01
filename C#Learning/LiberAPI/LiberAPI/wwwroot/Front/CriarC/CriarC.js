@@ -2,7 +2,7 @@ $(document).ready(function () {
   // code runs here only after the page’s DOM has finished loading, basically the main function
 
   //selecting element with id "button", # specifies id
-  $("#button").click(function () {
+  $("button").click(function () {
     const nome = $("#NomeInput").val().trim();
     const telefone = $("#TelefoneInput").val().trim();
 
@@ -17,13 +17,14 @@ $(document).ready(function () {
 
     $.ajax({
       type: "POST",
-      url: "/clientes",
+      url: "https://localhost:44318/clientes",
+      contentType: "application/json",
       data: JSON.stringify(payload),
       dataType: "json",
       success: function (response) {
         console.log("Cliente created:", response);
         //redirect to another page
-        window.location.href = "/mainPage/mainPage.html";
+        window.location.href = "/MainPage/MainPage.html";
       },
       error: function (xhr) {
         console.error("Error:", xhr.responseText);

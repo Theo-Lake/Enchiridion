@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiberAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e79dc9b7db8871ef5eda4d8790af8d379e7d91c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiberAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiberAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
