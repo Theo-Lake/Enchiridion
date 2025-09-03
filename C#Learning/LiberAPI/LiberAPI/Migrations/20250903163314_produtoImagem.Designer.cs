@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LiberAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250827171628_UpdateModels2")]
-    partial class UpdateModels2
+    [Migration("20250903163314_produtoImagem")]
+    partial class produtoImagem
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,10 @@ namespace LiberAPI.Migrations
                     b.Property<int>("CategoriaId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Imagem")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -143,7 +147,7 @@ namespace LiberAPI.Migrations
             modelBuilder.Entity("LiberaAPI.Produto", b =>
                 {
                     b.HasOne("LiberAPI.Categoria", "Categoria")
-                        .WithMany("Produtos")
+                        .WithMany()
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -160,11 +164,6 @@ namespace LiberAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("LiberAPI.Categoria", b =>
-                {
-                    b.Navigation("Produtos");
                 });
 
             modelBuilder.Entity("LiberaAPI.Venda", b =>

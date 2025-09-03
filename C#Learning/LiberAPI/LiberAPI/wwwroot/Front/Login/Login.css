@@ -1,121 +1,131 @@
 
-html, body { height: 100%; }
-body{
-  background: #121417;                 
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  display: grid;
-  place-items: center;                  /* centers the .card on both axes */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #121417;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    display: grid;
+    place-items: center; /* centers the .card on both axes */
 }
 
 /* === Outer gradient border + size cap === */
 .card {
-  width: min(560px, 92vw);              /* stops it from being too wide */
-  border-radius: 22px;
-  transition: all 0.3s;
+    width: min(560px, 92vw); /* stops it from being too wide */
+    border-radius: 22px;
+    transition: all 0.3s;
     background-color: #4f46e5;
 }
 
 .card2 {
-    background: #171717;                  /* darker than page bg for contrast */
-    border-radius: 20px;                  /* nice soft corners */
+    background: #171717; /* darker than page bg for contrast */
+    border-radius: 20px; /* nice soft corners */
     transition: all 0.2s;
     height: 500px;
 }
-.card2:hover { 
+
+.card2:hover {
     transform: scale(1.01);
 }
 
 /* === Form container === */
 .form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 24px 40px 16px;
-  background-color: #171717;            /* keep consistent with card */
-  border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 40px 16px;
+    background-color: #171717; /* keep consistent with card */
+    border-radius: 20px;
 }
 
 /* === Title === */
 #heading {
-  text-align: center;
-  margin: 6px 0 18px;
-  color: #ffffff;
-  font-size: 1.5em;
-  font-weight: 700;
+    text-align: center;
+    margin: 6px 0 18px;
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 .fields {
-   margin-top: 55px;
-   margin-bottom:30px;
+    margin-top: 55px;
+    margin-bottom: 30px;
 }
+
 /* === Input rows (icon + input) === */
 .field {
-  
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  border-radius: 9999px;
-  padding: 0.6em 0.9em;
-  border: none;
-  outline: none;
-  color: #e5e7eb;
-  background-color: #121417;
-  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
-  margin-bottom: 40px;
-  
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 9999px;
+    padding: 0.6em 0.9em;
+    border: none;
+    outline: none;
+    color: #e5e7eb;
+    background-color: #121417;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    margin-bottom: 40px;
+
 }
 
 .input-icon {
-  height: 1.3em;
-  width: 1.3em;
-  fill: #9ca3af;                        /* slightly lighter for visibility */
+    height: 1.3em;
+    width: 1.3em;
+    fill: #9ca3af; /* slightly lighter for visibility */
 }
 
 .input-field {
-  background: transparent;
-  border: none;
-  outline: none;
-  width: 100%;
-  color: #d3d3d3;
-  font-size: 0.98rem;
-  padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size: 0.98rem;
+    padding: 10px;
 }
 
 /* === Button row === */
 .form .btn {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 18px;
 }
 
 button {
-  width: 180px;
-  height: 54px;
-  border: none;
-  border-radius: 12px;
-  background: #6366f1;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background .2s;
+    width: 180px;
+    height: 54px;
+    border: none;
+    border-radius: 12px;
+    background: #6366f1;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .2s;
 }
+
 button:hover {
-  background: #4f46e5;
+    background: #4f46e5;
 }
 
 /* === Text below button (centered, same color family as heading) === */
-.form .below{
-  margin: 16px 0 4px;
-  text-align: center;
-  color: #e5e7eb;
+.form .below {
+    margin: 16px 0 4px;
+    text-align: center;
+    color: #e5e7eb;
 }
-.form .below a{
-  color: #a5b4fc;
-  text-decoration: none;
+
+.form .below a {
+    color: #a5b4fc;
+    text-decoration: none;
 }
-.form .below a:hover{ text-decoration: underline; }
+
+.form .below a:hover {
+    text-decoration: underline;
+}
 
 
 /* Got all this from uiverse */

@@ -3,59 +3,57 @@ using LiberAPI.Data;
 using LiberAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace LiberAPI.Routes
+namespace LiberAPI.Routes;
+
+public static class ClienteRoute
 {
-    public static class ClienteRoute
+    public static void MapCliente(this WebApplication app)
     {
-        public static void MapCliente(this WebApplication app)
+        var route = app.MapGroup("/clientes"); //this is used so app.MapGroup("").Map... isnt needed
+
+        //patttern "" is just what would be added under cliente so /cliente/create if pattern was "create"
+        //CREATE
+        route.MapPost("", async (ClienteRequest req, AppDbContext context) =>
         {
-            var route = app.MapGroup("/clientes"); //this is used so app.MapGroup("").Map... isnt needed
-                            
-                            //patttern "" is just what would be added under cliente so /cliente/create if pattern was "create"
-            //CREATE
-            route.MapPost("", async (ClienteRequest req, AppDbContext context) =>
-            {
-                var cliente = new Cliente(req.Nome, req.Telefone);
-                Console.WriteLine(req.Nome);
-                if (req.Nome == null)
-                    return Results.BadRequest("Nome e necessario");
-                if(req.Telefone == null)
-                    return Results.BadRequest("Telefone e necessario");
-                await context.Clientes.AddAsync(cliente);
-                await context.SaveChangesAsync();
-                
-                return Results.Created($"/clientes/{cliente.Id}", new { cliente.Id, cliente.Nome, cliente.Telefone });
-            });
+            var cliente = new Cliente(req.Nome, req.Telefone);
+            Console.WriteLine(req.Nome);
+            if (req.Nome == null)
+                return Results.BadRequest("Nome e necessario");
+            if (req.Telefone == null)
+                return Results.BadRequest("Telefone e necessario");
+            await context.Clientes.AddAsync(cliente);
+            await context.SaveChangesAsync();
 
-            //READ
-            route.MapGet("", async (AppDbContext context) =>
-            {
-                var cliente = await context.Clientes.ToListAsync();
-                return Results.Ok(cliente);
-            });
+            return Results.Created($"/clientes/{cliente.Id}", new { cliente.Id, cliente.Nome, cliente.Telefone });
+        });
 
-            //UPDATE
-            route.MapPut("{id:int}", async (int id, ClienteRequest req, AppDbContext context) =>
-            {
-                var cliente = await context.Clientes.FindAsync(id);
+        //READ
+        route.MapGet("", async (AppDbContext context) =>
+        {
+            var cliente = await context.Clientes.ToListAsync();
+            return Results.Ok(cliente);
+        });
 
-                if (cliente == null) { return Results.NotFound(); }
+        //UPDATE
+        route.MapPut("{id:int}", async (int id, ClienteRequest req, AppDbContext context) =>
+        {
+            var cliente = await context.Clientes.FindAsync(id);
 
-                cliente.ChangeName(req.Nome);
-                await context.SaveChangesAsync();
-                return Results.Ok(cliente);
-            });
+            if (cliente == null) return Results.NotFound();
 
-            //DELETE
-            route.MapDelete("{id:int}", async (int id, AppDbContext context) =>
-            {
-                var cliente = await context.Clientes.FindAsync(id);
-                if (cliente == null) { return Results.NotFound(); }
-                context.Clientes.Remove(cliente);
-                await context.SaveChangesAsync();   
-                return Results.Ok();
-            });
-        }
+            cliente.ChangeName(req.Nome);
+            await context.SaveChangesAsync();
+            return Results.Ok(cliente);
+        });
+
+        //DELETE
+        route.MapDelete("{id:int}", async (int id, AppDbContext context) =>
+        {
+            var cliente = await context.Clientes.FindAsync(id);
+            if (cliente == null) return Results.NotFound();
+            context.Clientes.Remove(cliente);
+            await context.SaveChangesAsync();
+            return Results.Ok();
+        });
     }
 }
-

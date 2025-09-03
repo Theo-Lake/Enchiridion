@@ -87,6 +87,10 @@ namespace LiberAPI.Migrations
                     b.Property<int>("CategoriaId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Imagem")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -140,7 +144,7 @@ namespace LiberAPI.Migrations
             modelBuilder.Entity("LiberaAPI.Produto", b =>
                 {
                     b.HasOne("LiberAPI.Categoria", "Categoria")
-                        .WithMany("Produtos")
+                        .WithMany()
                         .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -157,11 +161,6 @@ namespace LiberAPI.Migrations
                         .IsRequired();
 
                     b.Navigation("Cliente");
-                });
-
-            modelBuilder.Entity("LiberAPI.Categoria", b =>
-                {
-                    b.Navigation("Produtos");
                 });
 
             modelBuilder.Entity("LiberaAPI.Venda", b =>

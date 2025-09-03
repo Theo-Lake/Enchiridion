@@ -21,18 +21,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
- 
+
 app.MapCliente();
 app.MapProdutos();
 app.MapVendas();
 app.MapCategorias();
 
 app.UseHttpsRedirection();
-app.UseDefaultFiles();   
+app.UseDefaultFiles();
 app.UseStaticFiles();
 
 
 app.UseHttpsRedirection();
 app.Run();
-
-

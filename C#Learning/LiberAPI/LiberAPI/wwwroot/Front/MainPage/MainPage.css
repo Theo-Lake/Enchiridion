@@ -12,20 +12,20 @@ html, body {
 .banner_content {
     display: flex;
     align-items: center;
-    gap: 6px;           
+    gap: 6px;
 }
 
 .banner_text,
 .nome_text {
     color: #fff;
     font-size: 1.5rem;
-    line-height: 1.15;  
-    letter-spacing: 0;  
+    line-height: 1.15;
+    letter-spacing: 0;
 }
 
 .nome_text {
     font-weight: 700;
-    margin-left: 0;    
+    margin-left: 0;
 }
 
 
@@ -38,10 +38,31 @@ html, body {
     color: #fff;
     cursor: pointer;
 }
-.cart svg { width: 24px; height: 24px; fill: currentColor; }
+
+.cart svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
 
 
 .cart:hover svg {
     transform: scale(1.1);
     opacity: 0.85;
+}
+
+.produtos_title {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    letter-spacing: 0;
+}
+
+.produtos_scroll {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    gap: var(3);
 }
