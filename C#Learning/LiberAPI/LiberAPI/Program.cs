@@ -27,6 +27,10 @@ app.MapProdutos();
 app.MapVendas();
 app.MapCategorias();
 
+app.UseHttpsRedirection();
+app.UseDefaultFiles();   
+app.UseStaticFiles();
+
 
 app.UseHttpsRedirection();
 app.Run();

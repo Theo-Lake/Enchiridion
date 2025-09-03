@@ -1,0 +1,47 @@
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121417;
+}
+
+.banner {
+    background: #4f46e5;
+    padding: 12px 20px;
+}
+
+.banner_content {
+    display: flex;
+    align-items: center;
+    gap: 6px;           
+}
+
+.banner_text,
+.nome_text {
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 1.15;  
+    letter-spacing: 0;  
+}
+
+.nome_text {
+    font-weight: 700;
+    margin-left: 0;    
+}
+
+
+.cart {
+    background: transparent;
+    border: 0;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+.cart svg { width: 24px; height: 24px; fill: currentColor; }
+
+
+.cart:hover svg {
+    transform: scale(1.1);
+    opacity: 0.85;
+}

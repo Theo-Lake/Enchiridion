@@ -1,7 +1,7 @@
 
 html, body { height: 100%; }
 body{
-  background: #1b1f24;                 
+  background: #121417;                 
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   display: grid;
   place-items: center;                  /* centers the .card on both axes */
@@ -12,16 +12,18 @@ body{
   width: min(560px, 92vw);              /* stops it from being too wide */
   border-radius: 22px;
   transition: all 0.3s;
+    background-color: #4f46e5;
 }
 
-/* === Inner panel (the actual dark card) === */
 .card2 {
-  background: #171717;                  /* darker than page bg for contrast */
-  border-radius: 20px;                  /* nice soft corners */
-  transition: all 0.2s;
-  height: 500px;
+    background: #171717;                  /* darker than page bg for contrast */
+    border-radius: 20px;                  /* nice soft corners */
+    transition: all 0.2s;
+    height: 500px;
 }
-.card2:hover { transform: scale(1.01); }
+.card2:hover { 
+    transform: scale(1.01);
+}
 
 /* === Form container === */
 .form {
