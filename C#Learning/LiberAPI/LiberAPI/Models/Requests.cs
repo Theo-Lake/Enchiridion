@@ -4,7 +4,7 @@ public record ClienteRequest(string Nome, string Telefone);
 
 public record CategoriaRequest(string Nome);
 
-public record ProdutoRequest(string Nome, decimal Preco, int CategoriaId);
+public record ProdutoRequest(string Nome, decimal Preco, String Imagem, int CategoriaId);
 
 public record VendaRequest(int ClienteId, List<ItemVendaRequest> Itens);
 

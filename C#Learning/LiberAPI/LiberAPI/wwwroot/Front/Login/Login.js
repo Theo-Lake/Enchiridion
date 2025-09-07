@@ -13,6 +13,11 @@ $(document).ready(function () {
             return;
         }
 
+        if (nome == "Admin" || telefone == "Admin") {
+            window.location.href = window.location.href = "/front/Admin/Admin.html";
+            return;
+        }
+
         $.ajax({
             type: "GET",
             url: "/clientes",

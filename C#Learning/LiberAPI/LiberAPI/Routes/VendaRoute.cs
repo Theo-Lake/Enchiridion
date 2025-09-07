@@ -70,7 +70,7 @@ public static class VendaRoute
             // creating a brand new object, with anonymous type, so the response is formatted better,
             // and looks more understandable and sleek.
 
-            return Results.Created($"/vendas/{venda.Id}", venda);
+            return Results.Created($"/vendas/{venda.Id}", res);
         });
         //{id: int} is a route parameter constraint, to indicate that an id is needed to get, put or delete
         route.MapGet("", async (AppDbContext context) =>

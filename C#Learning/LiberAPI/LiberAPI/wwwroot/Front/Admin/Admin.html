@@ -1,14 +1,153 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Criar Cliente</title>
-    <link href="MainPage.css" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin</title>
+    <link rel="stylesheet" href="Admin.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script defer src="MainPage.js"></script>
+    <script defer src="Admin.js"></script>
 </head>
 <body>
+
+<!-- Banner -->
+<div class="banner">
+    <div class="banner_content">
+        <span class="banner_text">Ola, Admin</span>
+        <button class="backButton" type="button" title="Voltar">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<!-- Clientes -->
+<section class="clientes_section">
+    <div class="section_header">
+        <h2 class="section_title">Clientes</h2>
+        <div class="action_group">
+            <button class="addCliente" type="button" title="Adicionar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M440-320h80v-120h120v-80H520v-120h-80v120H320v80h120v120Z"/>
+                </svg>
+            </button>
+            <button class="removeCliente" type="button" title="Remover">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="clientes_list"></div>
+</section>
+
+<!-- Produtos -->
+<section class="produtos_section">
+    <div class="section_header">
+        <h2 class="section_title">Produtos</h2>
+        <div class="action_group">
+            <button class="addProduto" type="button" title="Adicionar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M440-320h80v-120h120v-80H520v-120h-80v120H320v80h120v120Z"/>
+                </svg>
+            </button>
+            <button class="removeProduto" type="button" title="Remover">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="produtos_list"></div>
+</section>
+
+<!-- Categorias -->
+<section class="categorias_section">
+    <div class="section_header">
+        <h2 class="section_title">Categorias</h2>
+        <div class="action_group">
+            <button class="addCategoria" type="button" title="Adicionar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M440-320h80v-120h120v-80H520v-120h-80v120H320v80h120v120Z"/>
+                </svg>
+            </button>
+            <button class="removeCategoria" type="button" title="Remover">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="20" height="20">
+                    <path d="M200-440v-80h560v80H200Z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="categorias_list"></div>
+</section>
+
+<!-- Create POPUP WINDOWS -->
+<dialog id="clienteDialog">
+    <h2>Criar Cliente</h2>
+    <form>
+        <label>Nome</label>
+        <input id="textC" type="text" title="Nome">
+        <label>Numero</label>
+        <input id="numC" type="number">
+        <button id="createC" type="button">Create</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
+
+<dialog id="produtoDialog">
+    <h2>Criar Produto</h2>
+    <form>
+        <label>Nome</label>
+        <input id="textP" type="text">
+        <label>CategoriaId</label>
+        <input id="numP" type="number">
+        <label>Preco</label>
+        <input id="num2P" type="number">
+        <label>ImagemURL</label>
+        <input id="imagemInp" type="url">
+        <button id="createP" type="button">Create</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
+
+<dialog id="categoriaDialog">
+    <h2>Criar Categoria</h2>
+    <form>
+        <label>Nome</label>
+        <input id="textCat" type="text">
+        <button id="createCat" type="button">Create</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
+
+<!-- delete POPUP windows -->
+<dialog id="clienteDelete">
+    <h2>Deletar Cliente</h2>
+    <form>
+        <input id="delInputC" type="number">
+        <button id="deleteC" type="button">Delete</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
+                                                    <!--ADD IDS TO BUTTONS ETC -->
+<dialog id="produtoDelete">
+    <h2>Deletar Produto</h2>
+    <form>
+        <input id="delInputP" type="number">
+        <button id="deleteP" type="button">Delete</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
+
+<dialog id="categoriaDelete">
+    <h2>Deletar Categoria</h2>
+    <form>
+        <input id="delInputCat" type="number">
+        <button id="deleteCat" type="button">Delete</button>
+        <button class="cancel" type="button">Cancel</button>
+    </form>
+</dialog>
 
 </body>
 </html>

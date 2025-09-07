@@ -6,11 +6,12 @@ public class Produto
 {
     //TODO implement the changeCategoria actually changing the categoria because now it only changes the ID
 
-    public Produto(string nome, int categoriaId, decimal preco)
+    public Produto(string nome, int categoriaId, decimal preco, string imagem)
     {
         Nome = nome;
         CategoriaId = categoriaId;
         Preco = preco;
+        Imagem = imagem;
     }
 
     public int Id { get; private set; }
@@ -18,7 +19,7 @@ public class Produto
     public int CategoriaId { get; private set; } //used to load a categoria without having to load whole object
     public Categoria? Categoria { get; set; }
     public decimal Preco { get; set; }
-
+    
     public string Imagem { get; set; }
 
     public void ChangePrice(decimal preco)
@@ -34,5 +35,10 @@ public class Produto
     public void ChangeCategoria(int categoriaId)
     {
         CategoriaId = categoriaId;
+    }
+
+    public void ChangeImagem(string imagem)
+    {
+        Imagem = imagem;
     }
 }

@@ -53,6 +53,7 @@ html, body {
 
 .produtos_title {
     color: #fff;
+    padding: 10px;
     font-size: 1.5rem;
     line-height: 1.15;
     letter-spacing: 0;
@@ -65,4 +66,80 @@ html, body {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     gap: var(3);
+}
+
+/*PRODUTO CARD SECTION*/
+
+.produtoCard{
+    --card-bg: #ffffff;
+    --card-accent: #7c3aed;
+    --card-text: #1e293b;
+    --card-shadow: 0 10px 15px -3px rgba(0,0,0,.05);
+
+    width: 300px;
+    min-height: 360px;           /* or your preferred height */
+    background: var(--card-bg);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;             /* keep rounded corners */
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255,255,255,.2);
+
+    display: flex;                /* <-- key */
+    flex-direction: column;       /* content then button */
+}
+
+.pCardContent{
+    flex: 1;                      /* <-- take remaining space */
+    height: auto;                 /* <-- remove height:100% */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.pCardContent img{
+    width: 100%;
+    height: 140px;                /* a fixed banner-like area */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.produtoNome{
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.produtoInfo{ margin-top: .25rem; }
+
+.produtoCart{
+    margin: .75rem;               /* inside card padding */
+    padding: .6rem 1rem;
+    border: 0;
+    border-radius: 12px;
+    background: var(--card-accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+.produtos_list {
+    display: flex;
+    gap: 8px;                  /* less space between cards */
+    padding: 20px 20px 20px 40px; /* more space at start (left padding = 40px) */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;     /* Firefox hides scrollbar */
+}
+
+.produtos_list::-webkit-scrollbar {
+    height: 8px;
+    background: transparent;   /* transparent track */
+}
+
+.produtos_list::-webkit-scrollbar-thumb {
+    background: transparent;   /* transparent thumb */
 }

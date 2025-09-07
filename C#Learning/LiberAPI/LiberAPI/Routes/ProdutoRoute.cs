@@ -13,7 +13,7 @@ public static class ProdutoRoute
 
         route.MapPost("", async (ProdutoRequest req, AppDbContext context) =>
         {
-            var produto = new Produto(req.Nome, req.CategoriaId, req.Preco);
+            var produto = new Produto(req.Nome, req.CategoriaId, req.Preco, req.Imagem);
             await context.Produtos.AddAsync(produto);
             await context.SaveChangesAsync();
 
@@ -37,6 +37,7 @@ public static class ProdutoRoute
             produto.ChangeName(req.Nome);
             produto.ChangeCategoria(req.CategoriaId);
             produto.ChangePrice(req.Preco);
+            produto.ChangeImagem(req.Imagem);
             await context.SaveChangesAsync();
             return Results.Ok(produto);
         });
