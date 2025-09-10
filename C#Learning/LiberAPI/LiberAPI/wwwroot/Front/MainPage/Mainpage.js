@@ -9,14 +9,14 @@ $(document).ready(function () {
     }
 
     // cart button
-    $("#cart").click(function () {
+    $(".cart").click(function () {
         window.location.href = "/front/Car/Cart.html";
         //TODO NOT WORKING
     });
 
     const $list = $("#produtosList");
 
-    // 1) fetch all categories, build a map id -> nome
+    
     $.ajax({
         type: "GET",
         url: "/categorias",
@@ -43,9 +43,7 @@ $(document).ready(function () {
                         // produto.preco can be string/number; coerce safely
                         const preco = Number(produto.preco);
                         const precoFmt = Number.isFinite(preco) ? preco.toFixed(2) : produto.preco;
-
                         const catNome = catById[produto.categoriaId] || produto.categoriaId || "—";
-
                         const card = `
               <div class="produtoCard">
               <div class="pCardContent">
@@ -56,54 +54,108 @@ $(document).ready(function () {
                   <p class="categoria">Categoria: ${catNome}</p>
                 </div>
                 </div>
-                <button class="produtoCart">Add to cart</button>
+                <button 
+                class="produtoCart" 
+                data-id="${produto.id}"
+                data-preco="${produto.preco}">
+                Add to cart
+                </button>
               </div>
             `;
                         $list.append(card);
                     });
                     
                     //produtoCart button:
-                    firstVenda = true;
+                    var firstVenda = true;
+                    var currentVendaId = null;
+                    const added = new Set(); //criando um set dos produtos ja adicionados pra checar.
                     
                     $(".produtoCart").click(function () {
-                        //Primeira coisa e pegar o ID do produto que apertou o botao,
+                        const produtoId = $(this).data("id");   //getting produtoId
+                        const produtoPreco = $(this).data("preco");
+                        const $btn = $(this);
+                        var quantidade = 1;
+                        
+                        
+                        if(added.has(produtoId)) return;
+                        
+                        
                         //depois checar se ja existe uma venda, se nao, criar uma,
                         // se sim, add novo produto a lista usando a funcao addItem.
-                        
-                         if(firstVenda === true) {
-                             $.ajax({
-                                 type: "POST",
-                                 url: "/vendas",
-                                 contentType: "application/json",
-                                 data: JSON.stringify(payload),
-                                 dataType: "json",
-                                 success: function (response) {
-                                     console.log("venda created:", response);
-                                     firstVenda = false;
-                                 },
-                                 error: function (xhr) {
-                                     console.error("Error:", xhr.responseText);
-                                 },
-                             });
-                         } else {
-                             $.ajax({
-                                 type: "PUT",
-                                 url: "/vendas",
-                                 contentType: "application/json",
-                                 data: JSON.stringify(payload),
-                                 dataType: "json",
-                                 success: function (response) {
-                                     console.log("venda created:", response);
-                                     firstVenda = false;
-                                 },
-                                 error: function (xhr) {
-                                     console.error("Error:", xhr.responseText);
-                                 },
-                             });
-                         }
+
+                        $.ajax({
+                            type: "GET", //pegando clienteId
+                            url: `/clientes?nome=${encodeURIComponent(nome)}`,
+                            success: function (cliente) {
+                                console.log("Cliente ID:", cliente.id);
+                                window.clienteId = cliente.id;
+
+                                if(firstVenda === true) {
+
+                                    const payload = {
+                                        ClienteId: cliente.id,
+                                        Itens: [{produtoId,quantidade,produtoPreco}]
+
+                                    }
+                                    console.log("payload successful: ", payload);
+                                    
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/vendas",
+                                        contentType: "application/json",
+                                        data: JSON.stringify(payload),
+                                        dataType: "json",
+                                        success: function (response) {
+                                            console.log("venda created:", response);
+                                            firstVenda = false;
+                                            currentVendaId = response.id;
+                                            
+                                            //disable button
+                                            added.add(produtoPreco);
+                                            $btn.text("Added").prop("disabled", true).css({
+                                                background: "gray",
+                                                cursor: "not-allowed",
+                                                opacity: "0.7",
+                                            });
+                                        },
+                                        error: function (xhr) {
+                                            console.error("Error:", xhr.responseText);
+                                        },
+                                    });
+                                } else {
+                                    
+                                    const itemPayload = { produtoId, quantidade, produtoPreco };
+                                    
+                                    console.log("payload successful: ", itemPayload);
+                                    $.ajax({
+                                        type: "PUT",
+                                        url: `/vendas/${currentVendaId}/itens`,
+                                        contentType: "application/json",
+                                        data: JSON.stringify(itemPayload),
+                                        dataType: "json",
+                                        success: function (response) {
+                                            console.log("venda created:", response);
+                                            firstVenda = false;
+
+                                            //disable button
+                                            added.add(produtoPreco);
+                                            $btn.text("Added").prop("disabled", true).css({
+                                                background: "gray",
+                                                cursor: "not-allowed",
+                                                opacity: "0.7",
+                                            });
+                                        },
+                                        error: function (xhr) {
+                                            console.error("Error:", xhr.responseText);
+                                        },
+                                    });
+                                }
+                            },
+                            error: function (xhr) {
+                                console.error("Error fetching cliente by nome:", xhr.responseText);
+                            }
+                        });
                     })
-                    
-                    
                 },
                 error: function (xhr) {
                     console.error("Error loading produtos:", xhr.responseText);

@@ -331,9 +331,9 @@ C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\LiberAPI\obj\Deb
 C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\LiberAPI\obj\Debug\net9.0\compressed\lehmsoo8yq-yvol2fk4h3.gz
 C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\LiberAPI\obj\Debug\net9.0\compressed\h8ok2d7y64-jdkxaisk63.gz
 C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\qfeq9tous6-fyg15lj3sp.gz
-C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\w7c8a5aasm-5ipweew5fc.gz
-C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\qdw5yz08ph-e4m00b2ggx.gz
-C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\lyheg4z2wg-5ipweew5fc.gz
 C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\5kwkh9zmj0-s6bjc3qxxf.gz
 C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\fbokjy9gcx-3sf8ohx24j.gz
-C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\fy3lq1gfvf-lsn17qctsb.gz
+C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\ky9sldgkcx-5ipweew5fc.gz
+C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\lgvb272zk6-e4m00b2ggx.gz
+C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\liberAPI\obj\Debug\net9.0\compressed\crpuj3v0i7-5ipweew5fc.gz
+C:\Users\theos\Documents\GitHub\Enchiridion\C#Learning\LiberAPI\LiberAPI\obj\Debug\net9.0\compressed\fy3lq1gfvf-t2371yu4nn.gz
