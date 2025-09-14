@@ -123,6 +123,12 @@ $(document).ready(function () {
     $(".cart").click(function () {
         window.location.href = "/front/Cart/Cart.html?nome=" + encodeURIComponent(nome);
     });
+    
+    //Logout button
+    $(".backButton").click(function () {
+        window.location.href = "/front/Login/Login.html";
+    });
+    
 
     // Product Cart button click handler (using event delegation)
     $(document).on("click", ".produtoCart", function () {

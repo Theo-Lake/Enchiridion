@@ -40,7 +40,7 @@ function getProduto(produtoId, categoria, img){
 }
 
 // Load products function
-function loadVenda(clienteId, $list) {   
+function loadVenda(clienteId, $list) {   //TODO nao ta funcionando
     $.ajax({
         type: "GET",
         url: "/vendas",
