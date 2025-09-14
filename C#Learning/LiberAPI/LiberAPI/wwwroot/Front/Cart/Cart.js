@@ -1,5 +1,4 @@
 //-------------------------FUNCTIONS
-
 function getCat(categoriaId,categoria) {
     $.ajax({
         type: "GET",
@@ -75,18 +74,18 @@ function loadVenda(clienteId, $list) {   //TODO nao ta funcionando
                                 <div class="quantity-controls">
                                     <label>Quantidade:</label>
                                     <div class="quantity-buttons">
-                                        <button type="button" class="quantity-btn remove-btn">
+                                        <button type="button" class="quantity-btn remove-btn"> <!--TODO add data in form of produtoId and other stuff -->
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M200-440v-80h560v80H200Z"/></svg>
                                         </button>
                                         <span class="quantity-value">${item.quantidade}</span>
-                                        <button type="button" class="quantity-btn add-btn">
+                                        <button type="button" class="quantity-btn add-btn"> <!--TODO add data in form of produtoId and other stuff -->
                                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/></svg>
                                         </button>
                                     </div>
                                 </div>
                                 
                                 <div class="item-actions">
-                                    <button class="action-btn delete-btn" data-id="${item.id}">
+                                    <button class="action-btn delete-btn" data-id="${item.id}"> 
                                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5f6368"><path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"/></svg>
                                         Excluir
                                     </button>
@@ -112,11 +111,30 @@ function loadVenda(clienteId, $list) {   //TODO nao ta funcionando
     });
 }
 
+function changeQuantity(quantidade) {
+    const itemPayload = { produtoId, quantidade, produtoPreco };
+
+    $.ajax({
+        type: "PUT",
+        url: "/vendas", //problema aqui, tenho quase ctz q precisa fzr um loop pra procurar a venda
+        contentType: "application/json",
+        data: JSON.stringify(itemPayload),
+        dataType: "json",
+        success: function (response) {
+            console.log("Item updated:", response);
+            $btn.text("Added " + quantidade);
+        },
+        error: function (error) {
+            console.error("Error:", error.responseText);
+        }
+    });
+}
+
 // Get clienteId function with callback
 function getClienteId(nome, callback) {
     $.ajax({
         type: "GET",
-        url: "/clientes",
+        url: "/vendas",
         success: function (clientes) {
             let foundId = null;
             clientes.forEach(cliente => {
@@ -130,6 +148,19 @@ function getClienteId(nome, callback) {
         error: function(error) {
             console.log("Error, cliente not found: ", error.responseText);
             callback(null);
+        }
+    });
+}
+
+function deleteProduto(produtoId) {
+    $.ajax({
+        type: "DELETE",
+        url: `/vendas/${produtoId}`, //////////////////////////////////////////////// THIS IS THE FIX FOR PUT YOU HAVE TO GET THE CORRECT URLS USING /$(ID)/$(PRODUTOID) ETC
+        success: function (response) {
+            console.log("Produto Deleted:", response);
+        },
+        error: function (xhr) {
+            console.error("Error:", xhr.responseText);
         }
     });
 }
@@ -165,10 +196,29 @@ $(document).ready(function () {
     });
 
     //backbutton
-    
     $(".backButton").click(function () {
         window.location.href = "/front/MainPage/MainPage.html?nome=" + encodeURIComponent(nome);
-    })
+    });
+    
+    //Add button
+    $(".quantity-btn remove-btn").click(function () {
+        // set variable const as produtoId and use that to do put.
+        //then get quantity of produto, decrement it by 1 and change quantity to put it.
+        changeQuantity();
+    });
+
+    //Remove button
+    $(".quantity-btn add-btn").click(function () {
+        // set variable const as produtoId and use that to do put.
+        //then get quantity of produto, increment it by 1 and change quantity to put it.
+        changeQuantity();
+    });
+
+    //delete button
+    $(".action-btn delete-btn").click(function () {
+        let id = $(this).data("id");
+        deleteProduto(id)
+    });
 });
 
 //TODO fazer q card aumenta com mais produtos adicionados.
