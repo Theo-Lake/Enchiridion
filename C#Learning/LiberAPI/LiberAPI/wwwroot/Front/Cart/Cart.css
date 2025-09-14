@@ -1,0 +1,371 @@
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121417;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.carrinho {
+    --card-bg: #ffffff;
+    --card-accent: #7c3aed;
+    --card-text: #1e293b;
+    --card-shadow: 0 10px 15px -3px rgba(0,0,0,.05);
+
+    width: 1200px;
+    min-height: 700px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(255,255,255,.2);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.carrinhoContent {
+    flex: 1;
+    padding: 30px;
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: 27px;
+    margin: 0;
+}
+
+.titleContainer{
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.Subtotal{
+    font-family: sans-serif;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 45px;
+    margin-left: 50px;
+}
+
+.totalContainer{
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+    margin-top: 12px;
+}
+
+/* Payment button container positioned at bottom right */
+.payment-button-container {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+/* Rest of your existing button styles remain the same */
+.container {
+    background-color: #ffffff;
+    display: flex;
+    width: 200px;
+    height: 60px;
+    position: relative;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.container:hover {
+    transform: scale(1.05);
+    width: 120px;
+}
+
+.container:hover .left-side {
+    width: 100%;
+}
+
+.left-side {
+    background-color: #5de2a3;
+    width: 70px;
+    height: 60px;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.right-side {
+    width: calc(100% - 70px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.right-side:hover {
+    background-color: #f9f7f9;
+}
+
+.arrow {
+    width: 12px;
+    height: 12px;
+    margin-right: 10px;
+}
+
+.new {
+    font-size: 14px;
+    font-family: "Lexend Deca", sans-serif;
+    margin-left: 12px;
+}
+
+.card {
+    width: 40px;
+    height: 26px;
+    background-color: #c7ffbc;
+    border-radius: 4px;
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 5px -2px rgba(77, 200, 143, 0.72);
+}
+
+.card-line {
+    width: 35px;
+    height: 8px;
+    background-color: #80ea69;
+    border-radius: 2px;
+    margin-top: 4px;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        transform: scale(0.7);
+    }
+
+    .container:hover {
+        transform: scale(0.74);
+    }
+
+    .new {
+        font-size: 12px;
+    }
+}
+
+.buttons {
+    width: 5px;
+    height: 5px;
+    background-color: #379e1f;
+    box-shadow: 0 -6px 0 0 #26850e, 0 6px 0 0 #56be3e;
+    border-radius: 50%;
+    margin-top: 3px;
+    transform: rotate(90deg);
+    margin: 6px 0 0 -15px;
+}
+
+.container:hover .card {
+    animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+.container:hover .post {
+    animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px) rotate(90deg);
+    }
+
+    60% {
+        transform: translateY(-40px) rotate(90deg);
+    }
+
+    100% {
+        transform: translateY(-5px) rotate(90deg);
+    }
+}
+
+.post {
+    width: 36px;
+    height: 45px;
+    background-color: #dddde0;
+    position: absolute;
+    z-index: 11;
+    bottom: 6px;
+    top: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.post-line {
+    width: 27px;
+    height: 6px;
+    background-color: #545354;
+    position: absolute;
+    border-radius: 0px 0px 2px 2px;
+    right: 5px;
+    top: 5px;
+}
+
+.post-line:before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 6px;
+    background-color: #757375;
+    top: -5px;
+}
+
+.screen {
+    width: 27px;
+    height: 14px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 14px;
+    right: 5px;
+    border-radius: 2px;
+}
+
+.numbers {
+    width: 7px;
+    height: 7px;
+    background-color: #838183;
+    box-shadow: 0 -11px 0 0 #838183, 0 11px 0 0 #838183;
+    border-radius: 2px;
+    position: absolute;
+    transform: rotate(90deg);
+    left: 14px;
+    top: 32px;
+}
+
+.numbers-line2 {
+    width: 7px;
+    height: 7px;
+    background-color: #aaa9ab;
+    box-shadow: 0 -11px 0 0 #aaa9ab, 0 11px 0 0 #aaa9ab;
+    border-radius: 2px;
+    position: absolute;
+    transform: rotate(90deg);
+    left: 14px;
+    top: 42px;
+}
+
+@keyframes slide-post {
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+.dollar {
+    position: absolute;
+    font-size: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    width: 100%;
+    left: 0;
+    top: 0;
+    color: #4b953b;
+    text-align: center;
+}
+
+.container:hover .dollar {
+    animation: fade-in-fwd 0.3s 1s backwards;
+}
+
+@keyframes fade-in-fwd {
+    0% {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 1250px) {
+    .carrinho {
+        width: 95%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrinho {
+        min-height: 600px;
+    }
+
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .payment-button-container {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+}
+
+.backButton {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, filter 0.15s ease;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 100;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.backButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background: #f8f9fa;
+}
+
+.backButton svg {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
